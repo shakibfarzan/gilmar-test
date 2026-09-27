@@ -15,7 +15,8 @@ import {
 import ServiceCard from './service-card';
 import type { ServicesCarouselProps } from './services-section.types';
 
-const BUTTON_IMAGE = 'linear-gradient(229.52deg, #02ADF7 -18.98%, #26E05A 121.29%)';
+const BUTTON_IMAGE =
+  'linear-gradient(229.52deg, var(--mui-palette-primary-main) -18.98%, var(--mui-palette-secondary-main) 121.29%)';
 const DRAG_THRESHOLD = 5;
 
 export default function ServicesCarousel({ items }: ServicesCarouselProps) {
@@ -113,9 +114,10 @@ export default function ServicesCarousel({ items }: ServicesCarouselProps) {
     position: 'absolute',
     top: '50%',
     zIndex: 1,
-    width: { xs: 44, md: 56 },
-    height: { xs: 44, md: 56 },
+    width: { xs: 30, md: 40 },
+    height: { xs: 30, md: 40 },
     color: 'common.white',
+    border: '2px solid white',
     backgroundImage: BUTTON_IMAGE,
     boxShadow: '0px 1px 0px 0px #FFFFFF29 inset, 0px 8px 20px -10px rgb(0 0 0 / 0.6)',
     transform: 'translateY(-50%)',
@@ -158,12 +160,12 @@ export default function ServicesCarousel({ items }: ServicesCarouselProps) {
           aria-label={mode === 'next' ? 'بعدی' : 'قبلی'}
           disabled={mode === 'prev' && atStart}
           onClick={() => scrollByCard(mode)}
-          sx={{ ...navButtonSx, insetInlineStart: { xs: 8, md: -28 } }}
+          sx={{ ...navButtonSx, insetInlineStart: { xs: -14, md: -22 } }}
         >
           <Box
             component="span"
             aria-hidden="true"
-            sx={{ display: 'inline-flex', transform: flipArrow ? 'scaleX(-1)' : 'none' }}
+            sx={{ display: 'inline-flex', mt: 0.4, transform: flipArrow ? 'scaleX(-1)' : 'none' }}
           >
             <Icon name="Arrow2" size={24} />
           </Box>

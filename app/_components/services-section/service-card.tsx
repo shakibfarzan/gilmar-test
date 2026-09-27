@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ServiceCardProps } from './services-section.types';
 
-export default function ServiceCard({ item }: ServiceCardProps) {
+export default function ServiceCard({ item, active = false }: ServiceCardProps) {
   return (
     <Box
       component={Link}
@@ -12,14 +12,19 @@ export default function ServiceCard({ item }: ServiceCardProps) {
         position: 'relative',
         display: 'block',
         flex: '0 0 auto',
-        width: { xs: '78%', sm: 300, md: 440, lg: 500 },
-        aspectRatio: { xs: '4 / 5', md: '1 / 1' },
-        borderRadius: { xs: '16px', md: '24px' },
+        width: { xs: 210, sm: 240, md: 262 },
+        aspectRatio: '262 / 305',
+        borderRadius: { xs: 4, md: 5 },
         overflow: 'hidden',
         scrollSnapAlign: 'start',
         textDecoration: 'none',
         color: 'common.white',
-        boxShadow: '0 12px 32px -16px rgb(0 0 0 / 0.45)',
+        boxShadow: active
+          ? '0 40px 60px -28px rgba(9, 47, 39, 0.55)'
+          : '0 30px 50px -28px rgba(9, 47, 39, 0.4)',
+        transform: active ? 'scale(1.12)' : 'scale(1)',
+        transition: 'transform 0.45s ease, box-shadow 0.45s ease',
+        willChange: 'transform',
         '& .service-card-image': { transition: 'transform 0.4s ease' },
         '&:hover .service-card-image': { transform: 'scale(1.05)' },
       }}
@@ -29,7 +34,7 @@ export default function ServiceCard({ item }: ServiceCardProps) {
         src={item.image.src}
         alt={item.image.alt}
         fill
-        sizes="(max-width: 600px) 78vw, (max-width: 1200px) 440px, 500px"
+        sizes="(max-width: 600px) 240px, (max-width: 900px) 270px, 300px"
         style={{ objectFit: 'cover' }}
       />
       <Box

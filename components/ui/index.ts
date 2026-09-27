@@ -13,4 +13,3 @@ export type { LayerProps } from './layer';
 export { default as Stage } from './stage';
 export type { StageProps } from './stage';
 export type { IconTone, ImageAsset, LayerPosition } from './types';
-

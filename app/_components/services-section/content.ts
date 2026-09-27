@@ -1,6 +1,12 @@
 import type { ServicesContent } from './services-section.types';
 
 export const servicesContent: ServicesContent = {
+  badge: {
+    icon: 'MagicStick2',
+  },
+  title: 'خدمات رفاهی گیلمار برای اقامتی دلنشین',
+  description:
+    'در گیلمار، آرامش طبیعت را در کنار خدمات رفاهی کامل تجربه می‌کنید؛ فضایی دنج و صمیمی که برای ساختن لحظاتی آرام، خوش و به‌یادماندنی آماده شده است.',
   items: [
     {
       id: 'birdwatching',
