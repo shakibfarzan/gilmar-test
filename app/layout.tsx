@@ -1,3 +1,4 @@
+import { Navbar, navbarContent } from '@/components/navbar';
 import { abarMid } from '@/fonts';
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
@@ -18,7 +19,10 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="fa" dir="rtl" className={`${abarMid.variable} ${geistSans.variable}`}>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navbar content={navbarContent} />
+          {children}
+        </Providers>
       </body>
     </html>
   );
