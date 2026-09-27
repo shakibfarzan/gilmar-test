@@ -25,11 +25,12 @@ export type { SectionTitleProps } from './section-title';
 export { default as Stage } from './stage';
 export type { StageProps } from './stage';
 export type {
-  IconTone,
-  ImageAsset,
-  LayerPosition,
-  ResponsiveColumns,
-  SectionAlign,
-  SectionBadge,
-  SectionCta,
+    IconTone,
+    ImageAsset,
+    LayerPosition,
+    ResponsiveColumns,
+    SectionAlign,
+    SectionBadge,
+    SectionCta
 } from './ui.types';
+
