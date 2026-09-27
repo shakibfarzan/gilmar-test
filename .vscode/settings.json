@@ -1,0 +1,7 @@
+{
+  "prettier.configPath": ".prettierrc",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.prettier": "always",
+    "source.organizeImports": "always"
+  }
+}
