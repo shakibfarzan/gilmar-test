@@ -2,12 +2,12 @@
 
 import Box from '@mui/material/Box';
 import {
-    useCallback,
-    useEffect,
-    useRef,
-    useState,
-    type MouseEvent as ReactMouseEvent,
-    type PointerEvent as ReactPointerEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type MouseEvent as ReactMouseEvent,
+  type PointerEvent as ReactPointerEvent,
 } from 'react';
 import CommentsCard from './comments-card';
 import CommentsDots from './comments-dots';
