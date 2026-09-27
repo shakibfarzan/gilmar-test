@@ -11,7 +11,7 @@ export const ICON_CONTAINER_ASSET: ImageAsset = {
   height: 60,
 };
 
-const SIZE_MAGIC_NUMBER = 0.35;
+const SIZE_MAGIC_NUMBER = 0.3;
 
 export interface FramedIconProps {
   icon: IconName;
@@ -39,6 +39,9 @@ export default function FramedIcon({
           width,
           height,
           flexShrink: 0,
+          bgcolor: 'secondary.light',
+          borderRadius: 999,
+          border: '4px solid white',
         },
         ...(Array.isArray(sx) ? sx : [sx]),
       ]}
@@ -49,7 +52,7 @@ export default function FramedIcon({
         width={frame.width}
         height={frame.height}
         aria-hidden
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 3 }}
       />
       <Icon name={icon} size={Math.round(height * SIZE_MAGIC_NUMBER)} />
     </Box>

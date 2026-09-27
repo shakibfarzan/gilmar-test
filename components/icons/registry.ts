@@ -11,8 +11,8 @@ export interface InlineIcon {
 
 export const fileIcons = {
   Accommodation: { src: '/icons/Accommodation.png', width: 35, height: 32 },
+  Arrow2: { src: '/icons/ArrowRight.png', width: 31, height: 31 },
   ArrowLeft: { src: '/icons/ArrowLeft.png', width: 24, height: 24 },
-  ArrowRight: { src: '/icons/ArrowRight.png', width: 31, height: 31 },
   Essay: { src: '/icons/Essay.png', width: 22, height: 19 },
   Globe: { src: '/icons/Globe.png', width: 20, height: 20 },
   Lightening: { src: '/icons/Lightening.png', width: 16, height: 20 },
