@@ -13,7 +13,7 @@ export default function Navbar({ content }: NavbarProps) {
       component="header"
       sx={{
         position: 'sticky',
-        top: { xs: 0, md: 16 },
+        top: { xs: 0, md: 32 },
         zIndex: (theme) => theme.zIndex.appBar,
         p: 1,
         m: { xs: 0, md: 4 },
