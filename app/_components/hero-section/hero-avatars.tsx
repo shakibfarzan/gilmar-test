@@ -56,7 +56,7 @@ const Avatar: React.FC<HeroAvatar & { marginInlineStart: number }> = ({
         width: 30,
         height: 30,
         borderRadius: '50%',
-        border: '2px solid background.paper',
+        border: '2px solid white',
         backgroundColor: 'background.paper',
         marginInlineStart,
       }}
