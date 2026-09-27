@@ -1,3 +1,5 @@
+import { IconName } from '../icons';
+
 export interface ImageAsset {
   src: string;
   alt: string;
@@ -15,3 +17,18 @@ export interface LayerPosition {
   width?: string;
   zIndex?: number;
 }
+
+export type SectionAlign = 'center' | 'start';
+
+export interface SectionBadge {
+  icon: IconName;
+  alt?: string;
+}
+
+export interface SectionCta {
+  label: string;
+  href: string;
+  icon?: IconName;
+}
+
+export type ResponsiveColumns = Partial<Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', number>>;

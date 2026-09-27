@@ -11,4 +11,3 @@ export type {
   ServicesSectionProps,
   ServicesTitleProps,
 } from './services-section.types';
-
