@@ -1,8 +1,8 @@
-import { AboutUsSection, aboutUsContent } from '@/app/_components/about-us';
+import { AboutUsSection, aboutUsContent } from '@/app/_components/about-us-section';
 import { HeroSection, heroContent } from '@/app/_components/hero-section';
-import { RulesSection, rulesContent } from '@/app/_components/rules';
+import { RulesSection, rulesContent } from '@/app/_components/rules-section';
 import { ServicesSection, servicesContent } from '@/app/_components/services-section';
-import { ResidenceSection, residenceContent } from './_components/residence';
+import { ResidenceSection, residenceContent } from './_components/residence-section';
 import { VideoSection, videoContent } from './_components/video-section';
 
 export default function Home() {
