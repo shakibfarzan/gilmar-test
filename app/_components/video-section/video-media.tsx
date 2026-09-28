@@ -1,5 +1,5 @@
 import { Icon } from '@/components/icons';
-import { Layer, Stage } from '@/components/ui';
+import { Layer, MaskLayer, Stage } from '@/components/ui';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
 import type { VideoMediaProps } from './video.types';
@@ -16,23 +16,15 @@ export default function VideoMedia({ media }: VideoMediaProps) {
         bgcolor: 'background.default',
       }}
     >
-      <Image
-        src={media.image.src}
-        alt={media.image.alt}
-        fill
-        sizes="(max-width: 900px) 100vw, 55vw"
-        style={{
-          objectFit: 'cover',
-          WebkitMaskImage: `url(${media.mask.src})`,
-          maskImage: `url(${media.mask.src})`,
-          WebkitMaskSize: 'cover',
-          maskSize: 'cover',
-          WebkitMaskPosition: 'center',
-          maskPosition: 'center',
-          WebkitMaskRepeat: 'no-repeat',
-          maskRepeat: 'no-repeat',
-        }}
-      />
+      <MaskLayer mask={media.mask}>
+        <Image
+          src={media.image.src}
+          alt={media.image.alt}
+          fill
+          sizes="(max-width: 900px) 100vw, 55vw"
+          style={{ objectFit: 'cover' }}
+        />
+      </MaskLayer>
 
       <Layer
         position={{ left: '10%', top: '50%' }}

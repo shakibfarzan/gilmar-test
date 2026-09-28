@@ -17,7 +17,7 @@ export interface IconCircleProps {
 }
 
 export const ICON_CIRCLE_GRADIENT =
-  'linear-gradient(203deg, var(--mui-palette-secondary-main) -10%, #12C0A4 120%)';
+  'linear-gradient(203deg, var(--mui-palette-secondary-main) -10%, var(--mui-palette-primary-main) 120%)';
 
 const variantSx: Record<IconCircleVariant, SxProps<Theme>> = {
   gradient: {

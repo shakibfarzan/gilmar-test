@@ -25,7 +25,7 @@ export default function FaqIntro({ content }: { content: FaqContent }) {
             width: 'min(100%, 420px)',
             height: 'auto',
             zIndex: 3,
-            filter: 'drop-shadow(0 8px 16px rgba(13, 116, 47, 0.3))',
+            filter: 'drop-shadow(0 20px 40px rgba(13, 116, 47, 0.3))',
           }}
         />
       </Box>

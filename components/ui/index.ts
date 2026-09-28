@@ -12,6 +12,8 @@ export { default as IconPill } from './icon-pill';
 export type { IconPillProps } from './icon-pill';
 export { default as Layer } from './layer';
 export type { LayerProps } from './layer';
+export { default as MaskLayer } from './mask-layer';
+export type { MaskLayerProps } from './mask-layer';
 export { default as MediaCard } from './media-card';
 export type { MediaCardProps } from './media-card';
 export { default as Section } from './section';

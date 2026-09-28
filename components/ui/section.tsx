@@ -1,10 +1,11 @@
 import Box from '@mui/material/Box';
 import type { SxProps, Theme } from '@mui/material/styles';
-import type { ReactNode } from 'react';
+import type { ElementType, ReactNode } from 'react';
 
 export interface SectionProps {
   id?: string;
   labelledBy?: string;
+  component?: ElementType;
   maxWidth?: number;
   children: ReactNode;
   sx?: SxProps<Theme>;
@@ -18,10 +19,11 @@ export default function Section({
   children,
   sx,
   containerSx,
+  component = 'section',
 }: SectionProps) {
   return (
     <Box
-      component="section"
+      component={component}
       id={id}
       aria-labelledby={labelledBy}
       sx={[

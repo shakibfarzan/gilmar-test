@@ -18,7 +18,6 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
             sx={{
               borderRadius: { xs: 4, md: 5 },
               bgcolor: 'background.default',
-              color: 'text.secondary',
               overflow: 'hidden',
               border: '1px solid rgba(0, 0, 0, 0.06)',
               boxShadow: open ? '0 0 0 12px rgba(255,255,255,.14)' : 'none',

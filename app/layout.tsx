@@ -1,3 +1,4 @@
+import { Footer, footerContent } from '@/components/footer';
 import { Navbar, navbarContent } from '@/components/navbar';
 import { abarMid } from '@/fonts';
 import type { Metadata } from 'next';
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <Providers>
           <Navbar content={navbarContent} />
           {children}
+          <Footer content={footerContent} />
         </Providers>
       </body>
     </html>
