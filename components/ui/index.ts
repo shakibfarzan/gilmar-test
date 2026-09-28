@@ -16,6 +16,8 @@ export { default as MaskLayer } from './mask-layer';
 export type { MaskLayerProps } from './mask-layer';
 export { default as MediaCard } from './media-card';
 export type { MediaCardProps } from './media-card';
+export { default as PageGlow } from './page-glow';
+export type { PageGlowPlacement, PageGlowProps } from './page-glow';
 export { default as Section } from './section';
 export type { SectionProps } from './section';
 export { default as SectionDescription } from './section-description';
@@ -33,5 +35,6 @@ export type {
   ResponsiveColumns,
   SectionAlign,
   SectionBadge,
-  SectionCta,
+  SectionCta
 } from './ui.types';
+

@@ -14,9 +14,9 @@ export default function PackagesFeatureCard({ feature }: PackagesFeatureCardProp
         gap: { xs: 1, md: 1.5 },
         px: 1.5,
         py: { xs: 2, md: 2.5 },
-        bgcolor: 'background.paper',
+        bgcolor: 'background.default',
         borderRadius: { xs: 3, md: 4 },
-        border: '1px solid rgba(0, 0, 0, 0.04)',
+        border: '4px solid white',
         boxShadow: '0 18px 40px -20px rgba(9, 47, 39, 0.35)',
       }}
     >
