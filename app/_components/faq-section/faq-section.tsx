@@ -18,6 +18,7 @@ export default function FaqSection({ content }: FaqSectionProps) {
       <Box
         sx={{
           display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'center',
           gap: { xs: 6, md: 8 },
         }}
