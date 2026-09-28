@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import type { SxProps, Theme } from '@mui/material/styles';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { ImageAsset } from './ui.types';
+import type { ImageAsset, ResponsiveRatio } from './ui.types';
 
 export interface MediaCardProps {
   href: string;
@@ -13,10 +13,23 @@ export interface MediaCardProps {
   title: string;
   subtitle?: string;
   sizes?: string;
+  ratio?: ResponsiveRatio;
+  subtitleLines?: number;
   sx?: SxProps<Theme>;
 }
 
-export default function MediaCard({ href, image, title, subtitle, sizes, sx }: MediaCardProps) {
+const DEFAULT_RATIO: ResponsiveRatio = { xs: '4 / 5', md: '1 / 1' };
+
+export default function MediaCard({
+  href,
+  image,
+  title,
+  subtitle,
+  sizes,
+  ratio = DEFAULT_RATIO,
+  subtitleLines,
+  sx,
+}: MediaCardProps) {
   return (
     <Box
       component={Link}
@@ -26,7 +39,7 @@ export default function MediaCard({ href, image, title, subtitle, sizes, sx }: M
           position: 'relative',
           display: 'block',
           width: '100%',
-          aspectRatio: { xs: '4 / 5', md: '1 / 1' },
+          aspectRatio: ratio,
           borderRadius: { xs: '16px', md: '24px' },
           overflow: 'hidden',
           textDecoration: 'none',
@@ -66,7 +79,21 @@ export default function MediaCard({ href, image, title, subtitle, sizes, sx }: M
         {subtitle ? (
           <Typography
             component="p"
-            sx={{ mt: 0.75, fontWeight: 600, fontSize: { xs: 12, md: 13 }, opacity: 0.9 }}
+            sx={{
+              mt: 0.75,
+              fontWeight: 600,
+              fontSize: { xs: 12, md: 13 },
+              lineHeight: 1.9,
+              opacity: 0.9,
+              ...(subtitleLines
+                ? {
+                    display: '-webkit-box',
+                    WebkitBoxOrient: 'vertical',
+                    WebkitLineClamp: subtitleLines,
+                    overflow: 'hidden',
+                  }
+                : null),
+            }}
           >
             {subtitle}
           </Typography>

@@ -2,6 +2,7 @@ import { AboutUsSection, aboutUsContent } from '@/app/_components/about-us-secti
 import { HeroSection, heroContent } from '@/app/_components/hero-section';
 import { RulesSection, rulesContent } from '@/app/_components/rules-section';
 import { ServicesSection, servicesContent } from '@/app/_components/services-section';
+import { BlogsSection, blogsContent } from './_components/blogs-section';
 import { CommentsSection, commentsContent } from './_components/comments-section';
 import { PackagesSection, packagesContent } from './_components/packages-section';
 import { ResidenceSection, residenceContent } from './_components/residence-section';
@@ -18,6 +19,7 @@ export default function Home() {
       <VideoSection content={videoContent} />
       <CommentsSection content={commentsContent} />
       <PackagesSection content={packagesContent} />
+      <BlogsSection content={blogsContent} />
     </>
   );
 }

@@ -32,3 +32,4 @@ export interface SectionCta {
 }
 
 export type ResponsiveColumns = Partial<Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', number>>;
+export type ResponsiveRatio = string | Partial<Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>>;
