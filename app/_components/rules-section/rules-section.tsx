@@ -19,8 +19,8 @@ export default function RulesSection({ content }: RulesSectionProps) {
     >
       <GridBackdrop
         sx={{
-          insetInlineStart: 0,
           top: '18%',
+          right: 0,
           width: { xs: '100%', md: '38%' },
           height: '72%',
           display: { xs: 'none', md: 'block' },

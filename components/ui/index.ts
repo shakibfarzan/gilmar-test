@@ -35,6 +35,5 @@ export type {
   ResponsiveColumns,
   SectionAlign,
   SectionBadge,
-  SectionCta
+  SectionCta,
 } from './ui.types';
-

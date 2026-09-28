@@ -18,7 +18,6 @@ export default function AboutUsSection({ content }: AboutUsSectionProps) {
     >
       <GridBackdrop
         sx={{
-          insetInlineEnd: 0,
           top: 0,
           width: { xs: '100%', md: '52%' },
           height: '100%',

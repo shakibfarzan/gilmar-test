@@ -20,7 +20,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
               bgcolor: 'background.default',
               overflow: 'hidden',
               border: '1px solid rgba(0, 0, 0, 0.06)',
-              boxShadow: open ? '0 0 0 12px rgba(255,255,255,.14)' : 'none',
+              boxShadow: open ? '0 30px 60px 5px rgba(0, 0, 0, 0.2)' : 'none',
               p: 0.5,
             }}
           >
